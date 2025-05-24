@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90;
+  }
+
+  .btn-danger {
+    @apply bg-danger text-white hover:bg-danger/90;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6;
+  }
+}
+
+/* Map-specific styles */
+.mapboxgl-map {
+  @apply rounded-xl;
+}
+
+.mapboxgl-popup {
+  @apply max-w-md;
+}
+
+.mapboxgl-popup-content {
+  @apply p-4 rounded-xl shadow-lg !important;
+}
+
+/* Drone markers */
+.drone-marker {
+  @apply w-6 h-6 rounded-full bg-primary border-2 border-white shadow-md;
+}
+
+.drone-marker.violation {
+  @apply bg-danger animate-pulse;
+} 
